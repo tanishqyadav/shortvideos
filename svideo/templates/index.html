@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>SVideo</title>
+  <head>
+    <body>
+      <h1>Short Video</h1>
+      <h2>
+        <div class="container">
+          {% for x in video %}
+          <h3 class = "text-center">{{x.title}}</h3>
+          <video width="320" height="240" controls>
+            <source src="{{x.video.url}}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>{{x.description}}</p>
+          <!-- <button>
+            {{x.like}}
+          </button> -->
+          {% endfor %}
+        </div>
+      </h2>
+
+    </body>
+  </head>
+
+</html>
